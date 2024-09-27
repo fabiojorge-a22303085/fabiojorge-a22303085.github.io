@@ -31,16 +31,17 @@
             </fieldset>
             
             <fieldset>
+                <form id="quiz" method="get" action="https://postman-echo.com/get">
                 <legend>Perguntas:</legend>
-                <label for="text">1 - Escreva três adjetivos que definam a cidade:</label>
+                <label for="text">Escreva três adjetivos que definam a cidade:</label>
                 <input type="text" name="adjetivos" id="adjetivos"autofocus>
                 <br>
-                <label for="radio">2 - A cidade já foi anteriormente chamada de:</label>
+                <label for="radio">A cidade já foi anteriormente chamada de:</label>
                 <input type="radio" name="nams" value="nams" required> Nova Amesterdão
                 <input type="radio" name="nlondon" value="nlondon"> Nova Londres
                 <br>
-                <label for="checkbox">3 - Quais destas equipas de basquetebol pertecem a New York:</label>
-                <input type="checkbox" id="nets" name="nets" value="nets" form="Perguntas:">
+                <label for="checkbox">Quais destas equipas de basquetebol pertecem a New York:</label>
+                <input type="checkbox" id="nets" name="nets" value="nets" form="equipas">
                 <label for="nets"> Nets </label>
                 <input type="checkbox" id="knicks" name="knicks value="knicks">
                 <label for="knicks"> Knicks </label>
@@ -68,8 +69,9 @@
                     <option value="empire">Empire State Building</option>
                     <option value="ponte">Ponte de Brooklyn</option>
                 </select>
+            </form>
             </fieldset>
-            
+        
         </main>
         <footer>
             <p>Fábio Jorge (a22303085) || Universidade Lusófona</p>
