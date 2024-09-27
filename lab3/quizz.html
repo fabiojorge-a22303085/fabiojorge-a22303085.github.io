@@ -25,18 +25,49 @@
             <legend>Introduza os seguintes dados:</legend>
             <input type="text" name="nome" placeholder="Nome">
             <input type="text" name="apelido" placeholder="Apelido">
-            <input type="text" name="nome" placeholder="Email">
+            <input type="email" id="email" name="email" placeholder="Email">
             <br><br>
             <input type ="submit">
             </fieldset>
             
             <fieldset>
                 <legend>Perguntas:</legend>
-                <label for="p1">1 - Escreva três adjetivos que definam a cidade:</label>
-                <input type="text" name="adjetivos" id="">
-
-                <label for="p1">2 - vdd ou falsa</label>
-            
+                <label for="text">1 - Escreva três adjetivos que definam a cidade:</label>
+                <input type="text" name="adjetivos" id="adjetivos"autofocus>
+                <br>
+                <label for="radio">2 - A cidade já foi anteriormente chamada de:</label>
+                <input type="radio" name="nams" value="nams" required> Nova Amesterdão
+                <input type="radio" name="nlondon" value="nlondon"> Nova Londres
+                <br>
+                <label for="checkbox">3 - Quais destas equipas de basquetebol pertecem a New York:</label>
+                <input type="checkbox" id="nets" name="nets" value="nets" form="Perguntas:">
+                <label for="nets"> Nets </label>
+                <input type="checkbox" id="knicks" name="knicks value="knicks">
+                <label for="knicks"> Knicks </label>
+                <input type="checkbox" id="bulls" name="bulls" value="bulls">
+                <label for="nets"> Bulls </label>
+                <br>
+                <label for="date">Qual a data em que houve o famoso ataque terrorista às Torres Gémeas?</label>
+                <input type="date" id="data" name="data" required>
+                <br>
+                <label for="time">Qual o melhor horário para visitar a Times Square?</label>
+                <input type="time" id="hora" name="hora">
+                <br>
+                <label for="color">Qual a cor que melhor representa o famoso Central Park no outono?</label>
+                <input type="color" id="cor" name="cor" value="#FF4500">
+                <br>
+                <label for="number">Qual era a população estimada de Nova Iorque em 2020 (milhões)?</label>
+                <input type="number" id="populacao" name="populacao" min="0" step="0.1" placeholder="6.2">
+                <br>
+                <label for="range">Em uma escala de 0 a 10, como classifica a beleza da cidade?</label>
+                <input type="range" id="beleza" name="beleza" min="0" max="10"  value="0">
+                <br>
+                <label for="select">Qual é o monumento mais icônico de Nova Iorque?</label>
+                <select id="select" name="monumento" required>
+                    <option value="estatua">Estátua da Liberdade</option>
+                    <option value="empire">Empire State Building</option>
+                    <option value="ponte">Ponte de Brooklyn</option>
+                </select>
             </fieldset>
             
         </main>
