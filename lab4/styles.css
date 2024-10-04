@@ -1,24 +1,85 @@
 header{
-    background-color:#bfc9ca;
+    background-color:#2471a3;
     border: 2px solid;
     border-radius: 8px;
     padding: 5px;
-}
-nav{
-    background-color:#bfc9ca;
-    float: left;
     text-align: center;
-    border: 2px solid;
-    border-radius: 8px;
-    padding: 5px;
-    
-}
-nav a {
-    text-decoration: none;
+    border-style: groove;
 }
 
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dc7633;
+    text-align: center;
+    border-style: groove;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+    text-align: center;
+  }
+
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+
+  .image-section {
+    width: 80%; /* A seção ocupa 80% da largura da página */
+    margin: 0 auto; /* Centraliza a seção no meio da página */
+    display: flex; /* Usa flexbox para alinhar as imagens */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+}
+
+/* Contêiner flexível para as imagens */
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre as imagens */
+    width: 100%; /* O contêiner ocupa 100% da seção */
+    max-width: 1200px; /* Opcional: limite de largura */
+}
+
+/* Estilos das imagens */
+.image-container img {
+    max-width: 30%; /* Cada imagem ocupa até 30% do contêiner */
+    height: auto; /* Mantém a proporção das imagens */
+}
+
+.video {
+    display: block; /* Transforma o link em um bloco */
+    text-align: center; /* Centraliza o texto dentro do link */
+    margin: 20px auto; /* Centraliza o link na página */
+}
+div{
+    text-align: center;
+}
+
+.poematxt{
+    text-align: center;
+}
 
 body {
-    background-color: #FFF5EE;
+    background-color: #f2f3f4;
     margin: 0;
 }
