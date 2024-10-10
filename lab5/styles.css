@@ -7,8 +7,7 @@ header{
     border-style: groove;
 }
 
-
-ul {
+ul.navi {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -18,22 +17,20 @@ ul {
     border-style: groove;
   }
   
-  li {
-    float: left;
-  }
-  
-  li a {
+  ul.navi li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    float: left;
   }
   
-  li a:hover {
+  ul.navi li a:hover {
     background-color: #111;
     text-align: center;
   }
+ 
 
 
   img {
@@ -78,6 +75,8 @@ div{
 .poematxt{
     text-align: center;
 }
+
+
 
 body {
     background-color: #f2f3f4;
