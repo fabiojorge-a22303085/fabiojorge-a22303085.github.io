@@ -82,6 +82,34 @@ div{
 }
 
 
+table.szn {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.szn th, .szn td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+.szn thead tr {
+  background-color: #dc7633;
+  color: white;
+}
+
+.szn tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.szn tbody tr:nth-child(even) {
+  background-color: #ffebcd;
+}
+
+.szn tbody tr:nth-child(3) {
+  background-color:#ffffff; 
+}
+
 
 body {
     background-color: #f2f3f4;
