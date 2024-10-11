@@ -5,6 +5,13 @@ header{
     padding: 5px;
     text-align: center;
     border-style: groove;
+    text-transform: uppercase;
+}
+
+body {
+  background-color: #f2f3f4;
+  margin: 0;
+  font-size: 16px;
 }
 
 ul.navi {
@@ -28,14 +35,12 @@ ul.navi li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  line-height: 40px; /* Ajuste a altura conforme necessário */
+  line-height: 40px; 
 }
 
 ul.navi li a:hover {
   background-color: #111;
 }
-
- 
 
 
   img {
@@ -48,30 +53,28 @@ ul.navi li a:hover {
   }
 
   .image-section {
-    width: 80%; /* A seção ocupa 80% da largura da página */
-    margin: 0 auto; /* Centraliza a seção no meio da página */
+    width: 80%; 
+    margin: 0 auto;
     display: flex; /* Usa flexbox para alinhar as imagens */
-    justify-content: center; /* Centraliza as imagens horizontalmente */
+    justify-content: center;
 }
 
-/* Contêiner flexível para as imagens */
 .image-container {
     display: flex;
-    justify-content: space-between; /* Espaçamento entre as imagens */
-    width: 100%; /* O contêiner ocupa 100% da seção */
-    max-width: 1200px; /* Opcional: limite de largura */
+    justify-content: space-between; 
+    width: 100%; 
+    max-width: 1200px;
 }
 
-/* Estilos das imagens */
 .image-container img {
-    max-width: 30%; /* Cada imagem ocupa até 30% do contêiner */
-    height: auto; /* Mantém a proporção das imagens */
+    max-width: 30%; 
+    height: auto; 
 }
 
 .video {
-    display: block; /* Transforma o link em um bloco */
-    text-align: center; /* Centraliza o texto dentro do link */
-    margin: 20px auto; /* Centraliza o link na página */
+    display: block; 
+    text-align: center; 
+    margin: 20px auto; 
 }
 div{
     text-align: center;
@@ -110,8 +113,6 @@ table.szn {
   background-color:#ffffff; 
 }
 
-
-body {
-    background-color: #f2f3f4;
-    margin: 0;
+section ul li {
+  font-size: 2em; /* Tamanho da fonte dos itens da lista é o dobro da fonte base */
 }
