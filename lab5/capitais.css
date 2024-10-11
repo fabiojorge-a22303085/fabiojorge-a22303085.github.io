@@ -1,0 +1,82 @@
+* {
+    font-family: sans-serif;
+    margin:0;  
+    padding:0;  
+    box-sizing: border-box; /* medidas sao tomadas da borda */
+  }
+  
+  header, main, article {
+    /* centrando o texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+  }
+  
+  header {
+    background: red;
+    position: sticky;
+    height: 10vh;
+    top: 0;
+    padding: 10px; /* Espaçamento interno */
+      color: white; /* Cor do texto */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+      z-index: 1000; /* Garante que o cabeçalho esteja acima de outros conteúdos */
+      display: flex; /* Usar flexbox para layout */
+      justify-content: space-between; /* Espaçar os itens */
+      align-items: center; /* Alinhar itens verticalmente */
+  }
+  
+  main {
+      height: 90vh;
+    background: purple;
+  }
+  
+  article {
+    height: 100vh;
+    background: orange;
+  }
+  
+  article:last-child {
+    height: 100vh;
+    background: black;
+    color: white;
+  }
+
+  h1 {
+    margin: 0; /* Remove a margem padrão do h1 */
+  }
+
+  nav {
+    margin-top: 0; /* Remove o espaço acima da navegação */
+  }
+
+  nav ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove a margem da lista */
+    display: flex; /* Usar flexbox para dispor os itens em linha */
+    gap: 15px; /* Espaço entre os itens */
+  }
+
+  nav ul li a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    padding: 8px 12px; /* Espaçamento interno dos links */
+    transition: background-color 0.3s; /* Efeito de transição para a cor de fundo */
+  }
+
+  nav ul li:last-child a {
+    background-color: #ff7f50; /* Cor de fundo diferente para o último link */
+    border-radius: 4px; /* Arredondar os cantos do fundo */
+  }
+
+  nav ul li a:hover {
+    background-color: #fff; /* Cor de fundo ao passar o mouse */
+    color: #dc7633; /* Cor do texto ao passar o mouse */
+  }
+
+  section {
+    padding: 50px; /* Espaçamento interno nas seções */
+    height: 400px; /* Altura fixa para as seções */
+  }

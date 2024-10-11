@@ -114,5 +114,9 @@ table.szn {
 }
 
 section ul li {
-  font-size: 2em; /* Tamanho da fonte dos itens da lista é o dobro da fonte base */
+  font-size: 2em; 
+}
+
+section ol li {
+  font-size: 2em; 
 }
