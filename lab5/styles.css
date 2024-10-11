@@ -8,28 +8,33 @@ header{
 }
 
 ul.navi {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #dc7633;
-    text-align: center;
-    border-style: groove;
-  }
-  
-  ul.navi li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    float: left;
-  }
-  
-  ul.navi li a:hover {
-    background-color: #111;
-    text-align: center;
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #dc7633;
+  text-align: center;
+  border-style: groove;
+}
+
+ul.navi li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+ul.navi li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  line-height: 40px; /* Ajuste a altura conforme necessário */
+}
+
+ul.navi li a:hover {
+  background-color: #111;
+}
+
  
 
 
