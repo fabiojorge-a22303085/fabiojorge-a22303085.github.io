@@ -1,0 +1,189 @@
+* {
+    font-family: sans-serif;
+    margin:0;  
+    padding:0;  
+    box-sizing: border-box; /* medidas sao tomadas da borda */
+  }
+  
+  header, main, article {
+    /* centrando o texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+  }
+  
+  
+  header {
+    height: 10vh; 
+    background: black;
+    color: white;
+    top: 0;  
+    
+    /* alinhando logo e menu */
+    display:flex;
+    justify-content: space-between;  
+    align-items: center;
+  }
+  
+  header div {
+    font-size: 2em;  
+    padding: 1em;
+  }
+  
+  header nav {
+    display:flex;
+    justify-contents: flex-end;  
+  }
+  
+  
+  nav a {
+    padding: 0 1em;
+    text-decoration: none;
+    font-size: 1rem;
+    color: lightgray;
+  }
+  
+  
+  main {
+    height: 85vh;
+    background-color:grey;
+    padding: 4em 4em;
+  }
+  
+  
+  article {
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    color: white;
+  }
+  
+
+
+  nav {
+    margin-top: 0; /* Remove o espaço acima da navegação */
+  }
+
+  nav ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove a margem da lista */
+    display: flex; /* Usar flexbox para dispor os itens em linha */
+    gap: 15px; /* Espaço entre os itens */
+  }
+
+  nav ul li a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    padding: 8px 12px; /* Espaçamento interno dos links */
+
+  }
+
+  nav ul li:last-child a {
+    background-color: #b6b6b6; /* Cor de fundo diferente para o último link */
+    border-radius: 4px; /* Arredondar os cantos do fundo */
+  }
+
+
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #6f6a6a;
+    font-size: 20px;
+    }
+
+ #poema div {
+  gap: 13px;
+display: flex;
+flex-direction: column;
+border: 3px solid black;
+ }
+
+  #poema p {
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  #paisagem div {
+    gap: 13px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+   }
+  
+  .imagemc {
+    width: 100%;   /* A imagem ocupará 100% do contêiner */
+    height: auto;  /* Mantém a proporção correta da imagem */
+    display: block;
+  }
+  
+  .autor {
+    position: absolute;    /* Posiciona o link em relação ao contêiner .imagec */
+    bottom: -810px;          /* Distância da parte inferior do contêiner */
+    right: 10px;           /* Distância do lado direito do contêiner */
+    color: white;          /* Cor do texto */
+    padding: 5px;          /* Espaçamento interno */
+    font-size: 1em;      /* Tamanho da fonte */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 4px;    /* Bordas arredondadas */
+  }
+  
+  .autor:hover {
+    text-decoration: underline;
+  }
+
+  #cidades {
+    display: flex;                /* Ativa o Flexbox no article */
+    flex-direction: row;         /* Alinha os itens em linha */
+    flex-wrap: wrap;             /* Permite que os itens quebrem para a próxima linha */
+    justify-content: space-between; /* Distribui espaço entre as seções */
+    padding: 20px;
+    background-color: #f0f0f0;   /* Cor de fundo do article */
+  }
+  
+  .cidade {
+    display: flex;               /* Usa Flexbox dentro da seção */
+    align-items: center;         /* Alinha a imagem e o texto verticalmente ao centro */
+    margin: 5px;               /* Espaçamento entre seções */
+    border: 1px solid #ccc;      /* Borda ao redor da seção */
+    border-radius: 8px;          /* Bordas arredondadas */
+    background-color: #e0e0e0;   /* Fundo claro para a cidade */
+    transition: background-color 0.5s; /* Transição suave para a cor de fundo */
+  }
+  
+  .cidade:hover {
+    background-color: #d0d0d0;   /* Muda a cor de fundo ao passar o mouse */
+  }
+  
+  .imagem {
+    width: 5px;               /* Largura da imagem */
+    height: auto;               /* Mantém a proporção da imagem */
+    border-radius: 5px;         /* Bordas arredondadas para a imagem */
+    margin-right: 5px;         /* Espaçamento entre a imagem e o nome da cidade */
+  }
+  
+  .nome {
+    width: 100%;                /* Largura total do div */
+    height: 100%;               /* Altura igual à altura da imagem */
+    font-size: 0.4em;           /* Tamanho da fonte para o nome da cidade */
+    color: #333;                /* Cor do texto */
+    display: flex;              /* Usa flexbox para centralizar texto */
+    align-items: right;        /* Centraliza verticalmente o texto */
+    justify-content: right;    /* Centraliza horizontalmente o texto */
+    padding: 1px;             /* Espaçamento interno */
+    background-color: #d0d0d0;  /* Fundo claro para o nome da cidade */
+    border-radius: 10px;        /* Bordas arredondadas */
+  }
+
+  .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }

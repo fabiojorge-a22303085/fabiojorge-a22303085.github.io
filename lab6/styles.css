@@ -1,0 +1,138 @@
+* {
+  font-family: Arial, serif; /* Define a fonte para Arial e serif como alternativa */
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box; /* medidas sao tomadas da borda */
+}
+
+header{
+    background-color:#2471a3;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    border-style: groove;
+    text-transform: uppercase;
+}
+
+body {
+  background-color: #f2f3f4;
+  margin: 0;
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Centraliza os links */
+  background-color: #dc7633;
+  padding: 0;
+  border-style: groove;
+  text-align: center;
+  overflow: hidden;
+}
+
+nav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  line-height: 40px; 
+  transition: background-color 0.3s ease; /* Suavizando a transição */
+}
+
+nav a:hover {
+  background-color: #111;
+}
+
+
+
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+
+  .image-section {
+    width: 80%; 
+    margin: 0 auto;
+    display: flex; /* Usa flexbox para alinhar as imagens */
+    justify-content: center;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    max-width: 1200px;
+    cursor: zoom-in;
+}
+
+.images img {
+    max-width: 30%; 
+    height: auto; 
+    cursor: zoom-in;
+}
+
+.video {
+    display: block; 
+    text-align: center; 
+    margin: 20px auto; 
+}
+div{
+    text-align: center;
+}
+
+.poematxt{
+    text-align: center;
+}
+
+
+table.szn {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.szn th, .szn td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+.szn thead tr {
+  background-color: #dc7633;
+  color: white;
+}
+
+.szn tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.szn tbody tr:nth-child(even) {
+  background-color: #ffebcd;
+}
+
+.szn tbody tr:nth-child(3) {
+  background-color:#ffffff; 
+}
+
+section ul li {
+  font-size: 2em; 
+}
+
+section ol li {
+  font-size: 2em; 
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2471a3;
+  color: white;
+  text-align: center;
+}
