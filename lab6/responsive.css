@@ -1,4 +1,4 @@
-/* Mobile Portrair */
+/* Mobile Portrait */
 @media (max-width: 480px) {
     header {
       text-align: center;
@@ -31,6 +31,7 @@
     }
   }
   
+  /* Mobile */
   @media (min-width: 481px) and (max-width: 767px) {
     header {
       text-align: center;
@@ -63,5 +64,71 @@ nav {
     }
   }
 
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    header {
+      text-align: center;
+      font-size: 2rem;
+    }
+
+nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;   
+        background-color: #dc7633;
+        padding: 0;
+        border-style: groove;
+    }
+  
+    nav a {
+      width: 100%;         
+      text-align: center;
+      padding: 16px;
+      font-size: 1.2rem;     
+    }
+  
+    main {
+      padding: 18px;
+      font-size: 1.2rem;   
+    }
+  
+    footer {
+      padding: 10px;
+      font-size: 1rem;   
+    }
+  }
+
+/* 4k */
+  @media (min-width: 1920px) {
+    header {
+      padding: 30px;
+      font-size: 3rem;
+    }
+
+nav {
+        justify-content: center;
+        align-items: center;   
+        background-color: #dc7633;
+        padding: 0;
+        border-style: groove;
+    }
+  
+    nav a {
+      width: 100%;         
+      text-align: center;
+      padding: 20px 30px;
+      font-size: 1.4rem;     
+    }
+  
+    main {
+      padding: 40px;
+      font-size: 1.4rem;   
+    }
+  
+    footer {
+      padding: 20px;
+      font-size: 1.2rem;   
+    }
+  }
   
   
