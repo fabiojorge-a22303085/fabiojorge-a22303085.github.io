@@ -13,16 +13,10 @@
     font-size: 3em;
   }
   
-  * {
-    padding: 0; 
-    margin: 0;
-    box-sizing:border-box;
-    font-family: sans-serif;
-  }
   
   header {
     height: 10vh; 
-    background: #080808;
+    background: black;
     color: white;
     top: 0;  
     
@@ -55,14 +49,6 @@
     height: 85vh;
     background-color:grey;
     padding: 4em 4em;
-  }
-  
-  footer {
-    height:5vh;
-    display:flex;
-    justify-content: flex-end;
-    padding: 0 2vw;
-    align-items: center;
   }
   
   
@@ -107,5 +93,97 @@
     height: 100vh;
     width: 100vw;
     background-color: #6f6a6a;
-    font-size: 2rem;
+    font-size: 20px;
     }
+
+ #poema div {
+  gap: 13px;
+display: flex;
+flex-direction: column;
+border: 3px solid black;
+ }
+
+  #poema p {
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  #paisagem div {
+    gap: 13px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+   }
+  
+  .imagemc {
+    width: 100%;   /* A imagem ocupará 100% do contêiner */
+    height: auto;  /* Mantém a proporção correta da imagem */
+    display: block;
+  }
+  
+  .autor {
+    position: absolute;    /* Posiciona o link em relação ao contêiner .imagec */
+    bottom: -810px;          /* Distância da parte inferior do contêiner */
+    right: 10px;           /* Distância do lado direito do contêiner */
+    color: white;          /* Cor do texto */
+    padding: 5px;          /* Espaçamento interno */
+    font-size: 1em;      /* Tamanho da fonte */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 4px;    /* Bordas arredondadas */
+  }
+  
+  .autor:hover {
+    text-decoration: underline;
+  }
+
+  #cidades {
+    display: flex;                /* Ativa o Flexbox no article */
+    flex-direction: row;         /* Alinha os itens em linha */
+    flex-wrap: wrap;             /* Permite que os itens quebrem para a próxima linha */
+    justify-content: space-between; /* Distribui espaço entre as seções */
+    padding: 20px;
+    background-color: #f0f0f0;   /* Cor de fundo do article */
+  }
+  
+  .cidade {
+    display: flex;               /* Usa Flexbox dentro da seção */
+    align-items: center;         /* Alinha a imagem e o texto verticalmente ao centro */
+    margin: 5px;               /* Espaçamento entre seções */
+    border: 1px solid #ccc;      /* Borda ao redor da seção */
+    border-radius: 8px;          /* Bordas arredondadas */
+    background-color: #e0e0e0;   /* Fundo claro para a cidade */
+    transition: background-color 0.5s; /* Transição suave para a cor de fundo */
+  }
+  
+  .cidade:hover {
+    background-color: #d0d0d0;   /* Muda a cor de fundo ao passar o mouse */
+  }
+  
+  .imagem-cidade {
+    width: 5px;               /* Largura da imagem */
+    height: auto;               /* Mantém a proporção da imagem */
+    border-radius: 5px;         /* Bordas arredondadas para a imagem */
+    margin-right: 5px;         /* Espaçamento entre a imagem e o nome da cidade */
+  }
+  
+  .nome-cidade {
+    width: 20%;                /* Largura total do div */
+    height: 20%;               /* Altura igual à altura da imagem */
+    font-size: 0.4em;           /* Tamanho da fonte para o nome da cidade */
+    color: #333;                /* Cor do texto */
+    display: flex;              /* Usa flexbox para centralizar texto */
+    align-items: center;        /* Centraliza verticalmente o texto */
+    justify-content: center;    /* Centraliza horizontalmente o texto */
+    padding: 1px;             /* Espaçamento interno */
+    background-color: #e0e0e0;  /* Fundo claro para o nome da cidade */
+    border-radius: 5px;        /* Bordas arredondadas */
+  }
+
+  .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
