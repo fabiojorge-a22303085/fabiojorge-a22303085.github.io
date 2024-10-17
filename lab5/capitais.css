@@ -175,7 +175,7 @@ border: 3px solid black;
     align-items: right;        /* Centraliza verticalmente o texto */
     justify-content: right;    /* Centraliza horizontalmente o texto */
     padding: 1px;             /* Espaçamento interno */
-    background-color: white;  /* Fundo claro para o nome da cidade */
+    background-color: #d0d0d0;  /* Fundo claro para o nome da cidade */
     border-radius: 10px;        /* Bordas arredondadas */
   }
 
