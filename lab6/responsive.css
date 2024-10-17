@@ -20,12 +20,15 @@ footer {
 
   body {
     display: grid;
+    grid-template-columns: 1fr;  /* Uma coluna */
+    grid-template-rows: auto;
     grid-template-areas:
-    'header-area header-area header-area'
-    'nav-area main-area side-area'
-    'nav-area footer-area footer-area';
-    grid-template-columns: 1fr 2fr 1fr; /* Ajustando as colunas */
-    grid-template-rows: auto 1fr auto;
+    'header-area'
+    'nav-area'
+    'main-area'
+    'footer-area';
+    grid-template-columns: 1fr;  /* Uma coluna */
+    grid-template-rows: auto;
     }
 
     header {
@@ -63,14 +66,14 @@ footer {
   @media (min-width: 481px) and (max-width: 767px) {
     body {
       display: grid;
+      grid-template-columns: 1fr; /* Ajustando as colunas */
+      grid-template-rows: auto;
       grid-template-areas:
-      'header-area'
+      'header-area header'
       'nav-area'
       'main-area'
-      'right-area'
+      'side-area'
       'footer-area';
-      grid-template-columns: 1fr 2fr 1fr; /* Ajustando as colunas */
-      grid-template-rows: auto 1fr auto;
       }
 
     header {
@@ -106,6 +109,16 @@ nav {
 
   /* Tablet */
   @media (min-width: 768px) and (max-width: 1024px) {
+    body {
+      display: grid;
+      grid-template-areas:
+      'header-area header-area'
+      'sidebar-area main-area'
+      'footer-area footer-area';
+      grid-template-columns: 1fr 3fr;  /* Duas colunas: 1 parte para a lateral e 3 partes para o conteúdo principal */
+      grid-template-rows: auto 1fr auto;
+      grid-gap: 10px; /* Espaçamento entre colunas e linhas */
+      }
     header {
       text-align: center;
       font-size: 2rem;
@@ -140,6 +153,17 @@ nav {
 
 /* 4k */
   @media (min-width: 1920px) {
+    body {
+      display: grid;
+      grid-template-areas:
+      'header-area header-area header-area'
+      'sidebar-area main-area main-area'
+      'footer-area footer-area footer-area';
+      grid-template-columns: 1fr 3fr 3fr;  /* Duas colunas: 1 parte para a lateral e 3 partes para o conteúdo principal */
+      grid-template-rows: auto;
+      grid-gap: 10px; /* Espaçamento entre colunas e linhas */
+      }
+    
     header {
       padding: 30px;
       font-size: 3rem;
