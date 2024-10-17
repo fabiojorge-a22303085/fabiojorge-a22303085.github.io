@@ -1,5 +1,21 @@
+header { grid-area: header-area; }
+nav { grid-area: nav-area; }
+main { grid-area: main-area; }
+aside { grid-area: right-area; }
+footer { grid-area: footer-area; }
+
+
 /* Mobile Portrait */
 @media (max-width: 480px) {
+
+  body {
+    display: grid;
+    grid-template-areas:
+    'header-area header-area header-area'
+    'menu-area main-area right-area '
+    'menu-area footer-area footer-area';
+    }
+
     header {
       text-align: center;
       font-size: 1rem;
