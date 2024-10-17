@@ -1,0 +1,33 @@
+/* Mobile */
+@media (max-width: 600px) {
+    header {
+      text-align: center;
+    }
+  
+    nav {
+        flex-direction: column;
+        align-items: center;   
+        background-color: #dc7633;
+        padding: 0;
+        border-style: groove;
+    }
+  
+    nav a {
+      width: 100%;         
+      text-align: center;
+      padding: 14px;
+      font-size: 1rem;     
+    }
+  
+    main {
+      padding: 10px;
+      font-size: 1rem;   
+    }
+  
+    footer {
+      padding: 10px;
+      font-size: 0.8rem;   
+    }
+  }
+  
+  
