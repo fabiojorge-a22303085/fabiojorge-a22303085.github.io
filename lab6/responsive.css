@@ -1,17 +1,17 @@
 header {
-  grid-area: header-area;
+  grid-area: header;
 }
 nav {
-  grid-area: nav-area;
+  grid-area: nav;
 }
 main {
-  grid-area: main-area;
+  grid-area: main;
 }
 aside {
-  grid-area: side-area;
+  grid-area: aside;
 }
 footer {
-  grid-area: footer-area;
+  grid-area: footer;
 }
 
 
@@ -20,135 +20,51 @@ footer {
 
   body {
     display: grid;
-    grid-template-columns: 1fr;  /* Uma coluna */
-    grid-template-rows: auto;
     grid-template-areas:
-    'header-area'
-    'nav-area'
-    'main-area'
-    'footer-area';
-    grid-template-columns: 1fr;  /* Uma coluna */
-    grid-template-rows: auto;
-    }
-
-    header {
-      text-align: center;
-      font-size: 1rem;
-    }
-  
-    nav {
-        flex-direction: column;
-        align-items: center;   
-        background-color: #dc7633;
-        padding: 0;
-        border-style: groove;
-    }
-  
-    nav a {
-      width: 100%;         
-      text-align: center;
+      'header'
+      'nav'
+      'main'
+      'footer';
+      gap: 10px;
       padding: 10px;
-      font-size: 1rem;     
+      grid-template-columns: auto;  
+      grid-template-rows: auto;
     }
   
-    main {
-      padding: 10px;
-      font-size: 1rem;   
-    }
-  
-    footer {
-      padding: 10px;
-      font-size: 0.8rem;   
-    }
 }
   
   /* Mobile */
   @media (min-width: 481px) and (max-width: 767px) {
-    body {
+
+      body{
       display: grid;
-      grid-template-columns: 1fr; /* Ajustando as colunas */
-      grid-template-rows: auto;
       grid-template-areas:
-      'header-area header'
-      'nav-area'
-      'main-area'
-      'side-area'
-      'footer-area';
-      }
-
-    header {
-      text-align: center;
-      font-size: 1.5rem;
-    }
-
-nav {
-        flex-direction: column;
-        align-items: center;   
-        background-color: #dc7633;
-        padding: 0;
-        border-style: groove;
-    }
-  
-    nav a {
-      width: 100%;         
-      text-align: center;
+      'header header'
+      'nav nav'
+      'main main'
+      'footer footer';
+      gap: 10px;
       padding: 10px;
-      font-size: 1rem;     
-    }
-  
-    main {
-      padding: 10px;
-      font-size: 1rem;   
-    }
-  
-    footer {
-      padding: 10px;
-      font-size: 0.8rem;   
+      grid-template-columns: 1fr 1fr;  
+      grid-template-rows: auto;
     }
   }
+
 
   /* Tablet */
   @media (min-width: 768px) and (max-width: 1024px) {
     body {
       display: grid;
       grid-template-areas:
-      'header-area header-area'
-      'sidebar-area main-area'
-      'footer-area footer-area';
-      grid-template-columns: 1fr 3fr;  /* Duas colunas: 1 parte para a lateral e 3 partes para o conteúdo principal */
-      grid-template-rows: auto 1fr auto;
-      grid-gap: 10px; /* Espaçamento entre colunas e linhas */
-      }
-    header {
-      text-align: center;
-      font-size: 2rem;
-    }
-
-nav {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;   
-        background-color: #dc7633;
-        padding: 0;
-        border-style: groove;
-    }
-  
-    nav a {
-      width: 100%;         
-      text-align: center;
-      padding: 16px;
-      font-size: 1.2rem;     
-    }
-  
-    main {
-      padding: 18px;
-      font-size: 1.2rem;   
-    }
-  
-    footer {
+      'header header header'
+      'nav nav nav'
+      'aside main main'
+      'aside footer footer';
+      gap: 10px;
       padding: 10px;
-      font-size: 1rem;   
-    }
+      grid-template-columns: 20vw 3fr 1fr;
+      grid-template-rows: 15vh 1fr 60px;
+      }
   }
 
 /* 4k */
@@ -156,43 +72,16 @@ nav {
     body {
       display: grid;
       grid-template-areas:
-      'header-area header-area header-area'
-      'sidebar-area main-area main-area'
-      'footer-area footer-area footer-area';
-      grid-template-columns: 1fr 3fr 3fr;  /* Duas colunas: 1 parte para a lateral e 3 partes para o conteúdo principal */
-      grid-template-rows: auto;
-      grid-gap: 10px; /* Espaçamento entre colunas e linhas */
+      'header header header'
+      'nav main main'
+      'nav main main'
+      'nav footer footer';
+      gap: 12px;
+      padding: 12px;
+      grid-template-columns: 20vw 2fr 2fr;
+      grid-template-rows: 15vh 1fr 80px;
       }
     
-    header {
-      padding: 30px;
-      font-size: 3rem;
-    }
-
-nav {
-        justify-content: center;
-        align-items: center;   
-        background-color: #dc7633;
-        padding: 0;
-        border-style: groove;
-    }
-  
-    nav a {
-      width: 100%;         
-      text-align: center;
-      padding: 20px 30px;
-      font-size: 1.4rem;     
-    }
-  
-    main {
-      padding: 40px;
-      font-size: 1.4rem;   
-    }
-  
-    footer {
-      padding: 20px;
-      font-size: 1.2rem;   
-    }
   }
-  
+
   
