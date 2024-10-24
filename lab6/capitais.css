@@ -187,3 +187,45 @@ border: 3px solid black;
     color: white;
     text-align: center;
   }
+
+
+  #experimenta {
+    padding: 40px 20px; /* Espaçamento ajustado para se alinhar com outras seções */
+    background-color: #f9f9f9; /* Cor de fundo consistente com o restante da página */
+    text-align: center; /* Centraliza o conteúdo da seção */
+}
+
+.circle-container {
+    display: flex;
+    justify-content: center; /* Centraliza o grupo de círculos */
+    gap: 30px; /* Espaço entre os círculos */
+    flex-wrap: wrap; /* Permite que os círculos quebrem para a próxima linha, se necessário */
+    margin: 0 auto; /* Garante que o container esteja centralizado na página */
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: transparent; /* Esconde o texto por padrão */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Animação suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para melhorar o design */
+}
+
+.circle:hover {
+    background-color: grey; /* Muda a cor do círculo ao passar o mouse */
+    color: white; /* Mostra o texto ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o círculo levemente */
+}
+
+.circle {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.4s ease;
+}
