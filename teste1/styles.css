@@ -1,0 +1,106 @@
+* {
+    font-family: sans-serif;
+    margin:0;  
+    padding:0;  
+    box-sizing: border-box; /* medidas sao tomadas da borda */
+  }
+  
+  header, main, article {
+    /* centrando o texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+  }
+  
+  
+  header {
+    height: 10vh; 
+    background: grey;
+    color: black;
+    top: 0;  
+    
+    /* alinhando logo e menu */
+    display:flex;
+    justify-content: space-between;  
+    align-items: center;
+  }
+  
+  header div {
+    font-size: 2em;  
+    padding: 1em;
+  }
+  
+  header nav {
+    display:flex;
+    justify-contents: flex-end;  
+  }
+  
+  
+  nav a {
+    padding: 0 1em;
+    text-decoration: none;
+    font-size: 1rem;
+    color: lightgray;
+  }
+  
+  
+  main {
+    height: 85vh;
+    background-color:grey;
+    padding: 4em 4em;
+  }
+
+
+  nav {
+    margin-top: 0; /* Remove o espaço acima da navegação */
+  }
+
+  nav ul {
+    padding: 0 1em;
+    text-decoration: none;
+    font-size: 1rem;
+    color: lightgray;
+  }
+
+
+ 
+
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #6f6a6a;
+    font-size: 20px;
+    }
+
+    section ul li {
+        font-size: 2em; 
+      }
+      
+      section ol li {
+        font-size: 2em; 
+      }
+
+
+     footer {
+        height: 10vh;
+        background: grey;
+        color: black;
+        bottom: 0;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      
+      footer p {
+        margin-left: 20px;
+        color: black;
+        text-decoration: none;
+        font-size: 1em;
+      }
+      
