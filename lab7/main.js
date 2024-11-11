@@ -79,9 +79,9 @@ document.getElementById('transforma').addEventListener('mouseout', restauratxt);
 //4 e 5
 // Função para mudar a cor de fundo com keydown
 function backColor(event) {
-    if (event.key === 'r') {
+    if (event.key === 'v') {
         document.body.style.backgroundColor = 'red';  // Altera o fundo para vermelho
-    } else if (event.key === 'b') {
+    } else if (event.key === 'a') {
         document.body.style.backgroundColor = 'blue'; // Altera o fundo para azul
     } else if (event.key === 'z') {
         document.body.style.backgroundColor = ''; // Restaura o fundo 
