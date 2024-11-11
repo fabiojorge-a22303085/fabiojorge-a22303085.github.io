@@ -50,9 +50,45 @@ function backgroundColor() {
 
 //5
 
-let counter = 0;
-const heading = document.querySelector('h1');
+let counter = 33;
+const heading = document.querySelector('span');
 function count() {
    counter++;
    heading.textContent = counter;
 } 
+
+
+
+//Eventos
+//1
+document.getElementById('clickB').addEventListener('click', textRed);
+
+//2 e 3
+function mudatxt() {
+    document.getElementById('transforma').innerText = 'Importância';
+}
+
+function restauratxt() {
+    document.getElementById('transforma').innerText = 'História';
+}
+
+document.getElementById('transforma').addEventListener('mouseover', mudatxt);
+
+document.getElementById('transforma').addEventListener('mouseout', restauratxt);
+
+//4 e 5
+// Função para mudar a cor de fundo com keydown
+function backColor(event) {
+    if (event.key === 'r') {
+        document.body.style.backgroundColor = 'red';  // Altera o fundo para vermelho
+    } else if (event.key === 'b') {
+        document.body.style.backgroundColor = 'blue'; // Altera o fundo para azul
+    } else if (event.key === 'z') {
+        document.body.style.backgroundColor = ''; // Restaura o fundo 
+    }
+}
+
+document.addEventListener('keydown', backColor);
+
+document.addEventListener('keyup', backAgain);
+
