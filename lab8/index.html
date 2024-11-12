@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+        <header>
+            <h1>JavaScript</h1>
+            <p>Vamos experimentar</p>
+        </header>
+        <nav>
+        <a href="eventos.html">Eventos</a>
+        <a href="index.html">JavaScript</a>
+        </nav>
+    <p id="transita" onmouseover="mudaTexto()" onmouseout="restauraTexto()">1. Passa por aqui!</p>
+    <p id="pinta">2. Pinta-me! <button onclick="textRed()">Red</button> <button onclick="textGreen()">Green</button> <button onclick="textBlue()">Blue</button> </p>
+    <p>3. Experimenta Escrever... <input type="text" id="caixaTexto" class="caixa-texto" oninput="changeColor()"></p>
+    <p>4. Escolha uma cor: 
+        <select id="cor">
+            <option value="white">White</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+        </select>
+    </p>
+    <p>5. <button onclick = "count()">Conta!</button> <span>72</span> </p>
+    <p>6. <input type="text" id="nome" placeholder="Insira o nome">
+          <input type="number" id="idade" placeholder="Insira a idade">
+          <button onclick="frase()">Submeter</button></p>
+    <div id="resultado"></div>
+    
+    const hello = (name) => "Hello " + name;
+
+    <script src="main.js"></script>
+</body>
+</html>
