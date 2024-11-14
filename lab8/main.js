@@ -9,18 +9,12 @@ function restauraTexto() {
 }
 
 // 2
-function textRed() {
-    document.getElementById('pinta').style.color = 'red';
-    }
-
-function textGreen() {
-    document.getElementById('pinta').style.color = 'green';
-    }
-
-    function textBlue() {
-        document.getElementById('pinta').style.color = 'blue';
-    }
-    
+document.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+        const color = button.getAttribute("data-color");
+        document.getElementById('pinta').style.color = color;
+    });
+});
 // 3
 // Definindo um array com as cores
 const cores = ['#8a8583', '#475c6c', '#eed7a1', '#cd8b62'];
@@ -35,12 +29,9 @@ function changeColor() {
 }
 
 //4
-function backgroundColor() {
-    const selectedColor = document.getElementById('cor').value;
-    document.body.style.backgroundColor = selectedColor;
-}
-
-document.getElementById('cor').addEventListener('change', backgroundColor);
+document.querySelector('select').onchange = function() {
+    document.querySelector('body').style.backgroundColor = this.value;
+};
 
 //5
 let counter = 72;
@@ -51,7 +42,11 @@ function count() {
 } 
 
 //6
-function frase() {
+document.querySelector('form').onsubmit = (e) => {
+    // Impedir o envio padrão do formulário (evita recarregar a página)
+    e.preventDefault();
+
+    // Obter os valores dos campos de texto
     const nome = document.getElementById('nome').value;
     const idade = document.getElementById('idade').value;
 
@@ -59,7 +54,7 @@ function frase() {
     document.getElementById('resultado').innerHTML = `
         <p>O ${nome} tem ${idade}!</p>
     `;
-}
+};
 
 
 //Eventos
