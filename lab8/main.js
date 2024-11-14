@@ -34,12 +34,20 @@ document.querySelector('select').onchange = function() {
 };
 
 //5
-let counter = 72;
-const heading = document.querySelector('span');
+if(!localStorage.getItem('counter')){
+    localStorage.setItem('counter', 0);
+}
+
+//let counter = ;
+// const heading = document.querySelector('span');
 function count() {
+    let counter = localStorage.getItem('counter');
    counter++;
-   heading.textContent = counter;
+   document.querySelector('#contar').textContent = counter;
+   localStorage.setItem('counter', counter);
 } 
+
+document.querySelector('#contar').textContent = localStorage.getItem('counter');
 
 //6
 document.querySelector('form').onsubmit = (e) => {
