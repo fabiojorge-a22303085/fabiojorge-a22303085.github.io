@@ -64,6 +64,21 @@ document.querySelector('form').onsubmit = (e) => {
     `;
 };
 
+//7
+let segundos = 0;
+
+function time() {
+    // Incrementar o contador
+    segundos++;
+    
+    // Atualizar o conteúdo do span com o novo valor
+    document.getElementById('contador').innerText = segundos;
+}
+
+// Chamar a função count() a cada 1 segundo (1000 milissegundos)
+setInterval(time, 1000);
+
+
 
 //Eventos
 //1
