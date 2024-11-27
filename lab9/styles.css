@@ -68,6 +68,44 @@ section h2 {
   padding: 20px;
 }
 
+/* Estilo para o contêiner de produtos selecionados */
+.selecionados {
+  display: flex;           /* Layout flexível para organizar os itens lado a lado */
+  flex-wrap: wrap;         /* Permitir quebra de linha quando o espaço acabar */
+  gap: 16px;               /* Espaço entre os itens */
+  list-style: none;        /* Remover marcadores da lista */
+  padding: 0;              /* Remover espaçamento interno */
+  margin: 0;               /* Remover espaçamento externo */
+}
+
+/* Estilo para cada produto */
+.selecionados li {
+  flex: 1 1 calc(25% - 16px); /* Cada item ocupa até 25% da largura (ajustável) */
+  box-sizing: border-box;     /* Incluir bordas e padding no cálculo do tamanho */
+  max-width: 200px;           /* Largura máxima de cada item */
+  min-width: 150px;           /* Largura mínima */
+}
+
+/* Ajustes para artigos dentro da lista */
+.selecionados article {
+  border: 1px solid #ddd;     /* Borda para separar visualmente */
+  border-radius: 8px;         /* Borda arredondada */
+  padding: 8px;               /* Espaçamento interno */
+  text-align: center;         /* Centralizar texto e imagens */
+  background-color: #f9f9f9;  /* Fundo claro */
+}
+
+.selecionados img {
+  max-width: 100%;            /* Imagem responsiva */
+  height: auto;
+  margin-bottom: 8px;         /* Espaço abaixo da imagem */
+}
+
+.selecionados h3 {
+  font-size: 1rem;            /* Tamanho ajustado para o título */
+  color: #333;                /* Cor do texto */
+}
+
   
   /* Estilo para cada artigo (produto) */
   article {
@@ -126,12 +164,42 @@ section h2 {
     background-color: #e292de;
   }
   
-  /* Efeito de hover no artigo */
   article:hover {
     transform: translateY(-5px);
   }
   
+   /* Botão de adicionar ao cesto */
+   article button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  article button:hover {
+    background-color: #e292de;
+  }
+  
+.limpa-cesto{
+  background-color: white;
+    color: purple;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
 
+.limpa-cesto:hover {
+  background-color: #E1D9D1;
+}
 
 footer {
     text-align: center;
