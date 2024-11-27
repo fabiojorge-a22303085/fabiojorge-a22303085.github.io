@@ -26,32 +26,48 @@ header nav a {
 }
 
 /* Conteúdo Principal */
+/* Ajustar o layout do main */
 main {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+  display: flex;
+  flex-direction: column; /* Coloca os filhos em coluna */
+  justify-content: flex-start; /* Alinha ao início */
+  align-items: stretch; /* Faz as seções ocuparem a largura completa */
+  padding: 20px;
+  gap: 20px; /* Espaço entre as seções */
 }
 
+/* Ajustar as seções */
 section {
-    width: 100%;
+  display: block;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 0; /* Margens controladas pelo gap de main */
+  border-radius: 8px;
 }
 
 section h2 {
-    border-bottom: 2px solid purple;
-    padding-bottom: 5px;
-    text-align: center;
+  border-bottom: 2px solid purple;
+  padding-bottom: 5px;
+  text-align: center;
 }
 
+/* Cesto estilizado */
+.cesto {
+  text-align: center;
+  padding: 10px;
+  background-color: purple;
+  color: white;
+}
 
-
-/* Estilo básico para o contêiner */
+/* Contêiner para produtos */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
   
   /* Estilo para cada artigo (produto) */
   article {
@@ -107,7 +123,7 @@ section h2 {
   }
   
   article button:hover {
-    background-color: #27ae60;
+    background-color: #e292de;
   }
   
   /* Efeito de hover no artigo */
@@ -120,6 +136,6 @@ section h2 {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: purple;
-    color: white;
+    background-color: white;
+    color: black;
 }
