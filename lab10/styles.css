@@ -1,0 +1,209 @@
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: purple;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Conteúdo Principal */
+/* Ajustar o layout do main */
+main {
+  display: flex;
+  flex-direction: column; /* Coloca os filhos em coluna */
+  justify-content: flex-start; /* Alinha ao início */
+  align-items: stretch; /* Faz as seções ocuparem a largura completa */
+  padding: 20px;
+  gap: 20px; /* Espaço entre as seções */
+}
+
+/* Ajustar as seções */
+section {
+  display: block;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 0; /* Margens controladas pelo gap de main */
+  border-radius: 8px;
+}
+
+section h2 {
+  border-bottom: 2px solid purple;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+/* Cesto estilizado */
+.cesto {
+  text-align: center;
+  padding: 10px;
+  background-color: purple;
+  color: white;
+}
+
+/* Contêiner para produtos */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilo para o contêiner de produtos selecionados */
+.selecionados {
+  display: flex;           /* Layout flexível para organizar os itens lado a lado */
+  flex-wrap: wrap;         /* Permitir quebra de linha quando o espaço acabar */
+  gap: 16px;               /* Espaço entre os itens */
+  list-style: none;        /* Remover marcadores da lista */
+  padding: 0;              /* Remover espaçamento interno */
+  margin: 0;               /* Remover espaçamento externo */
+}
+
+/* Estilo para cada produto */
+.selecionados li {
+  flex: 1 1 calc(25% - 16px); /* Cada item ocupa até 25% da largura (ajustável) */
+  box-sizing: border-box;     /* Incluir bordas e padding no cálculo do tamanho */
+  max-width: 200px;           /* Largura máxima de cada item */
+  min-width: 150px;           /* Largura mínima */
+}
+
+/* Ajustes para artigos dentro da lista */
+.selecionados article {
+  border: 1px solid #ddd;     /* Borda para separar visualmente */
+  border-radius: 8px;         /* Borda arredondada */
+  padding: 8px;               /* Espaçamento interno */
+  text-align: center;         /* Centralizar texto e imagens */
+  background-color: #f9f9f9;  /* Fundo claro */
+}
+
+.selecionados img {
+  max-width: 100%;            /* Imagem responsiva */
+  height: auto;
+  margin-bottom: 8px;         /* Espaço abaixo da imagem */
+}
+
+.selecionados h3 {
+  font-size: 1rem;            /* Tamanho ajustado para o título */
+  color: #333;                /* Cor do texto */
+}
+
+  
+  /* Estilo para cada artigo (produto) */
+  article {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+  
+  /* Imagem do produto */
+  article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Estilo do título do produto */
+  article h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  /* Descrição do produto */
+  article p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Estilo do preço */
+  article p strong {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Botão de adicionar ao cesto */
+  article button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  article button:hover {
+    background-color: #e292de;
+  }
+  
+  article:hover {
+    transform: translateY(-5px);
+  }
+  
+   /* Botão de adicionar ao cesto */
+   article button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  article button:hover {
+    background-color: #e292de;
+  }
+  
+.limpa-cesto{
+  background-color: white;
+    color: purple;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.limpa-cesto:hover {
+  background-color: #E1D9D1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
