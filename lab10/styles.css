@@ -36,6 +36,9 @@ main {
   gap: 20px; /* Espaço entre as seções */
 }
 
+main h1 {
+  text-align: center;
+}
 /* Ajustar as seções */
 section {
   display: block;
@@ -206,4 +209,37 @@ footer {
     padding: 10px;
     background-color: white;
     color: black;
+}
+
+
+
+.options {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.options label {
+  font-size: 1.2em;
+  margin-right: 10px;
+  color: #333; /* Ajuste conforme necessário */
+}
+
+.filtro {
+  font-size: 1em;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.filtro:hover {
+  border-color: #aaa;
+}
+
+.filtro:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
