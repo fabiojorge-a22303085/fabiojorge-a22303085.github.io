@@ -2,7 +2,14 @@ const container = document.querySelector('.container');
 const listaSelecionados = document.querySelector('.selecionados');
 const totalElement = document.querySelector('.total');
 const limparButton = document.getElementById('limpar');
-const filtroCategoria = document.getElementById('categoria-filtro');
+const filtroCategoria = document.getElementById('categoria');
+const ordemPreco = document.getElementById('ordenacao');
+const pesquisaNome = document.getElementById('pesquisa');
+
+const comprarButton = document.getElementById('comprar');
+const resultadoCompra = document.getElementById('resultado-compra');
+const estudanteCheckbox = document.getElementById('estudante');
+const cupaoInput = document.getElementById('desconto');
 
 let total = 0; // Total inicial
 let carrinho = carregarCarrinho(); // Carrega o carrinho do localStorage
@@ -109,5 +116,70 @@ filtroCategoria.addEventListener('change', function () {
     .catch(error => console.error('Erro ao carregar produtos:', error));
 });
 
+//Ordenar por preço
+function ordenarProdutos(produtos, ordem) {
+  if (ordem === 'crescente') {
+    return produtos.sort((a, b) => a.price - b.price);
+  } else if (ordem === 'decrescente') {
+    return produtos.sort((a, b) => b.price - a.price);
+  }
+  return produtos; // Sem ordenação
+}
+
+
+function getProdutos() {
+  const categoriaSelecionada = filtroCategoria.value.toLowerCase();
+  const ordemSelecionada = ordemPreco.value;
+  const termoPesquisa = pesquisaNome.value.toLowerCase();
+
+  fetch('https://deisishop.pythonanywhere.com/products/')
+    .then(response => response.json())
+    .then(produtos => {
+      // Filtra produtos por categoria, se selecionado
+      let produtosFiltrados = categoriaSelecionada
+        ? produtos.filter(produto => produto.category.toLowerCase() === categoriaSelecionada)
+        : produtos;
+
+      // Filtra produtos pelo termo de pesquisa
+      produtosFiltrados = termoPesquisa
+        ? produtosFiltrados.filter(produto => produto.title.toLowerCase().includes(termoPesquisa))
+        : produtosFiltrados;
+
+      // Ordena produtos, se uma ordem válida foi selecionada
+      const produtosOrdenados = ordemSelecionada
+        ? ordenarProdutos(produtosFiltrados, ordemSelecionada)
+        : produtosFiltrados;
+
+      // Renderiza os produtos filtrados e ordenados
+      renderizarProdutos(produtosOrdenados);
+    })
+    .catch(error => console.error('Erro ao carregar produtos:', error));
+}
+
+
+
+// Função para ordenar produtos
+function ordenarProdutos(produtos, ordem) {
+  return produtos.sort((a, b) => {
+    if (ordem === 'crescente') {
+      return a.price - b.price;
+    } else if (ordem === 'decrescente') {
+      return b.price - a.price;
+    }
+    return 0;
+  });
+}
+
+// Eventos para atualizar produtos dinamicamente
+filtroCategoria.addEventListener('change', getProdutos);
+ordemPreco.addEventListener('change', getProdutos);
+pesquisaNome.addEventListener('input', getProdutos);
+
+// Inicializa a página com todos os produtos
+document.addEventListener('DOMContentLoaded', getProdutos);
+
+
 // Inicializa o carrinho
 inicializarCarrinho();
+
+

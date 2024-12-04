@@ -20,28 +20,42 @@
         
         <!-- Filtro de categorias -->
         <section id="options">
-          <label for="categoria-filtro">Filtrar:</label>
-          <select id="categoria-filtro" class="filtro">
+          <label for="categoria">Filtrar:</label>
+          <select id="categoria" class="filtro">
             <option value="">Todas as categorias</option>
             <option value="T-shirts">T-shirts</option>
             <option value="Canecas">Canecas</option>
             <option value="Meias">Meias</option>
           </select>
+
+          <label for="ordenacao">Ordenar:</label>
+          <select id="ordenacao" class="filtro">
+            <option value="">Ordenar por preço</option>
+            <option value="crescente">Crescente</option>
+            <option value="decrescente">Decrescente</option>
+          </select>
+
+          <label for="pesquisa">Pesquisar:</label>
+          <input type="text" id="pesquisa" class="filtro" placeholder="Introduza o produto">
         </section>
         
         <!-- Lista de produtos -->
         <section id="produtos" class="container">
-          <!-- Os produtos serão carregados aqui via JavaScript -->
+          <!-- Os produtos serão carregados aqui -->
         </section>
         
         <!-- Carrinho -->
         <section id="cesto" class="cesto">
           <h2>Produtos selecionados:</h2>
           <ul class="selecionados">
-            <!-- Os itens selecionados serão adicionados aqui -->
+            <!-- Itens selecionados -->
           </ul>
           <p class="total">Custo Total: 0,00€</p>
+          <p>É estudante do DEISI? <input type ="checkbox" id="estudante"></input></p>
+          <p>Cupão de desconto <input type="text" id="desconto"></input></p>
           <button id="limpar" class="limpa-cesto">Limpar Carrinho</button>
+          <button id="comprar" class="btcompra">Comprar</button>
+          <p id="resultado-compra"></p>
         </section>
       </main>
       
