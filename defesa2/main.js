@@ -119,11 +119,11 @@ filtroCategoria.addEventListener('change', function () {
 //Ordenar por preço
 function ordenarProdutos(produtos, ordem) {
   if (ordem === 'crescente') {
-    return produtos.sort((a, b) => a.price - b.price);
+    return produtos.sort((a, b) => a.rate - b.rate);
   } else if (ordem === 'decrescente') {
-    return produtos.sort((a, b) => b.price - a.price);
+    return produtos.sort((a, b) => b.rate - a.rate);
   }
-  return produtos; // Sem ordenação
+  return produtos;
 }
 
 
@@ -182,3 +182,7 @@ document.addEventListener('DOMContentLoaded', getProdutos);
 // Inicializa o carrinho
 inicializarCarrinho();
 
+function addTodos(){
+  todosProdutos.forEach(produto => {carrinho.push(produto);});
+  atualizarCarrinho()
+}

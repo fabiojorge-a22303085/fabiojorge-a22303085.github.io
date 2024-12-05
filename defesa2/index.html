@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Loja</h1>
+        <nav>
+            <a href="#produtos">Produtos</a>
+            <a href="#cesto">Cesto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Selecione os produtos</h1>
+        
+        <!-- Filtro de categorias -->
+        <section id="options">
+          <label for="categoria">Filtrar:</label>
+          <select id="categoria" class="filtro">
+            <option value="">Todas as categorias</option>
+            <option value="T-shirts">T-shirts</option>
+            <option value="Canecas">Canecas</option>
+            <option value="Meias">Meias</option>
+          </select>
+
+          <label for="ordenacao">Ordenar:</label>
+          <select id="ordenacao" class="filtro">
+            <option value="">Ordenar por rating</option>
+            <option value="crescente">Crescente</option>
+            <option value="decrescente">Decrescente</option>
+          </select>
+
+          <label for="pesquisa">Pesquisar:</label>
+          <input type="text" id="pesquisa" class="filtro" placeholder="Introduza o produto">
+          <button id="menos-info" class="info">Menos Info</button>
+        </section>
+        
+        <!-- Lista de produtos -->
+        <section id="produtos" class="container">
+          <!-- Os produtos serão carregados aqui -->
+        </section>
+        
+        <!-- Carrinho -->
+        <section id="cesto" class="cesto">
+          <h2>Produtos selecionados:</h2>
+          <ul class="selecionados">
+            <!-- Itens selecionados -->
+          </ul>
+          <p class="total">Custo Total: 0,00€</p>
+          <p>É estudante do DEISI? <input type ="checkbox" id="estudante"></input></p>
+          <p>Cupão de desconto <input type="text" id="desconto"></input></p>
+          <button id="addall" class="btadd">Adicionar Todos</button>
+          <button id="limpar" class="limpa-cesto">Limpar Carrinho</button>
+          <button id="comprar" class="btcompra">Comprar</button>
+          <p id="resultado-compra"></p>
+        </section>
+      </main>
+      
+
+    <footer>
+        <p>2024</p>
+    </footer>
+
+    <script src="produtos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
