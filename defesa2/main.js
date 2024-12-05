@@ -11,6 +11,9 @@ const resultadoCompra = document.getElementById('resultado-compra');
 const estudanteCheckbox = document.getElementById('estudante');
 const cupaoInput = document.getElementById('desconto');
 
+const addButton = document.getElementById('add');
+
+
 let total = 0; // Total inicial
 let carrinho = carregarCarrinho(); // Carrega o carrinho do localStorage
 
@@ -89,6 +92,7 @@ function limparCarrinho() {
 
 // Adiciona evento de clique no botão para limpar carrinho
 limparButton.addEventListener('click', limparCarrinho);
+addButton.addEventListener('click', addTodos);
 
 // AJAX para buscar produtos
 document.addEventListener('DOMContentLoaded', function () {
@@ -116,7 +120,7 @@ filtroCategoria.addEventListener('change', function () {
     .catch(error => console.error('Erro ao carregar produtos:', error));
 });
 
-//Ordenar por preço
+//Ordenar por rate
 function ordenarProdutos(produtos, ordem) {
   if (ordem === 'crescente') {
     return produtos.sort((a, b) => a.rate - b.rate);
@@ -158,13 +162,13 @@ function getProdutos() {
 
 
 
-// Função para ordenar produtos
+// Função para ordenar
 function ordenarProdutos(produtos, ordem) {
   return produtos.sort((a, b) => {
     if (ordem === 'crescente') {
-      return a.price - b.price;
+      return a.rate - b.rate;
     } else if (ordem === 'decrescente') {
-      return b.price - a.price;
+      return b.rate - a.rate;
     }
     return 0;
   });
@@ -175,14 +179,17 @@ filtroCategoria.addEventListener('change', getProdutos);
 ordemPreco.addEventListener('change', getProdutos);
 pesquisaNome.addEventListener('input', getProdutos);
 
-// Inicializa a página com todos os produtos
-document.addEventListener('DOMContentLoaded', getProdutos);
 
 
 // Inicializa o carrinho
 inicializarCarrinho();
 
+//Função para adicionar todos
 function addTodos(){
   todosProdutos.forEach(produto => {carrinho.push(produto);});
   atualizarCarrinho()
 }
+
+
+// Inicializa a página com todos os produtos
+document.addEventListener('DOMContentLoaded', getProdutos);
