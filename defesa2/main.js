@@ -186,7 +186,7 @@ inicializarCarrinho();
 
 //Função para adicionar todos
 function addTodos(){
-  todosProdutos.forEach(produto => {carrinho.push(produto);});
+  todosProdutos.forEach(produto => {cesto.push(produto);});
   atualizarCarrinho()
 }
 
