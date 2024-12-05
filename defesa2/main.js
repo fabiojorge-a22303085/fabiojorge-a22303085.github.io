@@ -90,7 +90,6 @@ function limparCarrinho() {
   salvarCarrinho(carrinho);
 }
 
-// Adiciona evento de clique no botão para limpar carrinho
 limparButton.addEventListener('click', limparCarrinho);
 addButton.addEventListener('click', addTodos);
 
@@ -183,6 +182,7 @@ pesquisaNome.addEventListener('input', getProdutos);
 
 // Inicializa o carrinho
 inicializarCarrinho();
+
 
 //Função para adicionar todos
 function addTodos(){
